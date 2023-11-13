@@ -1,0 +1,3 @@
+The following files in the _sass directory have been modified from the source, Fastpages, and they do not contain any liability or other damages, indirect or direct.
+
+All work is provided on an as is basis without warranties or conditions of any kind. We are not responsable for any risks associated, either expressed or implied.

@@ -1,0 +1,74 @@
+# course illustrations
+introduction_tools: &introduction_tools |
+    +-----------------+
+    | Laptop, OS      |
+    | Tool Setup      | 
+    +-----------------+
+       |
+       | VS Code, Anaconda, Jupyter
+       v
+    +-----------------+
+    | VS Code, Develop|
+    | Code Editor     | 
+    +-----------------+
+       |
+       | Write code, build, run localhost, test, debug
+       v
+    +-----------------+
+    | VS Code, Git    |
+    | Version Control |       | 
+    +-----------------+
+       |
+       | Commit local versions, track change
+       v
+    +-----------------+
+    | VS Code, Project|
+    | GitHub Sync     |
+    +-----------------+
+       |
+       | Push changes to cloud Repository
+       v
+    +-----------------+
+    | GitHub,  Collab |
+    | Shared Code     |
+    +-----------------+
+       |
+       | Actions, Jekyll build
+       v
+    +-----------------+
+    | GitHub Pages    |
+    | Showcase Project|
+    +-----------------+
+
+# CSSE course meta data
+Sprint1:
+  title: Tools and Software Development Processes
+  description: By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Markdown, HTML, and JavaScript. Students will establish foundation using essential tools and software development processes to support their coding journey.
+  illustration: *introduction_tools
+  start: 0
+  end: 3
+Sprint2:
+  title: Introduction to Development with JavaScript
+  description: A key focus of this course is to make Web Games using JavaScript. These next few weeks we will perform the aspects of constructing a game and deploying the game to GitHub Pages.   Our goal is to participate in N@tM with the other CS classes and other classes from the Electives Department.
+  start: 4
+  end: 7
+Sprint3:
+  title:  Building a Web Application with GitHub Pages for N@tM
+  description: Part of the process of becoming technically proficient is taking on challenges while coding, these challenges will often make a student feel uncomforatable.   But with some vision, questions, and AI research it is amazing what can be done.  
+  start: 8
+  end: 12
+Sprint4:
+  title: Working with Data and Frameworks
+  description: Understanding key development frameworks available in GitHub Pages make development faster.  We will look at storing data in the Browsers with Local Storage, generating repetitive code using YML and Liquid and styling HTML with SASS.
+  start: 13
+  end: 16
+Sprint5:
+  title: Algorithmic and Programming Fundamentals
+  description: Each week a "Student Team" will have a teaching assignment.  Additionally, the Teacher is providing mini-labs that correspond to topics for the week.  Using the two things together, you will your learning experience, blogging and Jupyter Notebooks skills.
+  start: 17
+  end: 20
+Sprint6:
+  title: Create a Final Project and N@tM 
+  description: Trimester 2 concludes with student presenting their CPT project at N@tM.  Each person within "Student Teams" will have their own specialty within the student project that satisfied all their Create Performance Task requirements.   Student should be able to talk about design, coding, and present features of their portion of the system.
+  start: 21
+  end: 24

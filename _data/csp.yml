@@ -1,0 +1,123 @@
+# course illustrations
+introduction_tools: &introduction_tools |
+    +-----------------+
+    | Laptop, OS      |
+    | Tool Setup      | 
+    +-----------------+
+       |
+       | VS Code, Anaconda, Jupyter, Python
+       v
+    +-----------------+
+    | VS Code, Develop|
+    | Code Editor     | 
+    +-----------------+
+       |
+       | Code, build, test, debug
+       v
+    +-----------------+
+    | VS Code, Git    |
+    | Version Control |       | 
+    +-----------------+
+       |
+       | Commit local versions, track change
+       v
+    +-----------------+
+    | VS Code, Project|
+    | GitHub Sync     |
+    +-----------------+
+       |
+       | Push changes to cloud Repository
+       v
+    +-----------------+
+    | GitHub,  Collab |
+    | Shared Code     |
+    +-----------------+
+       |
+       | Actions, Jekyll build
+       v
+    +-----------------+
+    | GitHub Pages    |
+    | Showcase Project|
+    +-----------------+
+
+web_dev_layers: &web_dev_layers |
+    +---------------+
+    | GitHub Pages  |
+    | Design, Layout|
+    |   Frontend    |
+    +---------------+
+          |
+          | User presentation, style 
+          | Actions
+          v
+    +--------------+
+    |  JavaScript  |
+    | Logic/Events |
+    +--------------+
+          |
+          | JS Functionality, interactivity
+          | Sends API request/response
+          v
+    +----------------+
+    | AWS EC2 Server |
+    | Python / Flask |
+    |     Backend    |
+    +----------------+
+          |
+          | Python Server-Side Proccessing
+          | Analysis, Computation, and Models
+          | Communicate with Data Services
+          v
+    +----------------+
+    |  AWS Services  |
+    |   Store Data   |
+    +----------------+
+
+# CSP course meta data
+Sprint1:
+  title: Tools and Software Development Processes
+  description: By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Python, Markdown, HTML, and JavaScript. Students will establish foundation using essential tools and software development processes to support their coding journey.
+  illustration: *introduction_tools
+  start: 0
+  end: 3
+Sprint2:
+  title: Web Development Layers
+  description: During Weeks 4-7, students will delve into the layers used in Web Development. They will learn about the key components that make up websites, including the Frontend, Backend, and Data layers. The main focus of this Sprint is to empower students to explore the development and deployment of a simple website. Throughout this period, there will be several lectures that provide ideas and concepts on how to build different components of a website, including sending and receiving data from a backend server.
+  illustration: *web_dev_layers
+  start: 4
+  end: 7
+Sprint3:
+  title:  Web Application, Data, and N@tM
+  description: Student teams need to build their own Website and individuals need to blog their learnings. The team Website should include interests, but also requires the use of Python Flask and JavaScript programming.  By the end of the Sprint, students will be ready to start many of the technical coding aspects of Web Development; having established a Deployed Website, Frontend, and Backend.  In November, the Trimester will end by presenting team project at the Electives Department "Night at the Museum" (N@tM). 
+  start: 8
+  end: 12
+Sprint4:
+  title: Algorithmic Programming 
+  description: Trimester 2 begins with student teaching and a focus on algorithms.  Each week a "Student Team" has a teaching assignment supported by College Board materials.  Additionally, the Teacher is providing Career Tech mini-labs that correspond to one or more topics for the week.  Use the two things together as you improve your learning experience, Frontend blog and Jupyter Notebooks.
+  start: 13
+  end: 16
+Sprint5:
+  title: OOP and Databases
+  description: Trimester 2 continues with student learning OOP and immediately applying it to Databases.  Each week a "Student Teams" will be working on frontend and backend elements for their Create Performance Task (CPT).  GitHub pages will be focus of instruction for frontend, OOP in Python will be instruction provided to create a database which will help exceed every CPT requirement.
+  start: 17
+  end: 20
+Sprint6:
+  title: Create Performance Task (CPT) and N@tM 
+  description: Trimester 2 concludes with student presenting their CPT project at N@tM.  Each person within "Student Teams" will have their own specialty within the student project that satisfied all their Create Performance Task requirements.   Student should be able to talk about design, coding, and present features of their portion of the system.
+  start: 21
+  end: 24
+Sprint7: 
+  title: Data Structures
+  description: This is the beginning of a college course following outline of CS113 Data Structures from Mira Costa CC.  Topics, using Python, include searching, sorting, hashing, algorithms, analysis, object-oriented design, collections, lists, stacks, queues, trees, sets, dictionaries, and graphs.
+  start: 25
+  end: 29
+Sprint8:
+  title: AP Weeks
+  description: Activities will be focused on supporting students in test preparations, including student teaching.  Days that are not focused on test preparation will be focused on planning for year end project/portfolio.
+  start: 30
+  end: 32
+Sprint9:
+  title: Passion Project and N@tM
+  description: Presenting accomplishments for the year by creating a passion project for N@tM.  This project will serve as the year end final exam.
+  start: 33
+  end: 36

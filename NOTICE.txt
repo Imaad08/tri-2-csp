@@ -1,0 +1,5 @@
+The following files in the _includes directory have been modified from the source, fastpages, and they do not contain any liability or other damages, indirect or direct.
+
+All work is provided on an as is basis without warranties or conditions of any kind. We are not responsable for any risks associated, either expressed or implied.
+
+We as NIGHTHAWK-Pages developers distribute all copyright, patent, trademark, and attribution notices from the source form of the work, fastpages.
