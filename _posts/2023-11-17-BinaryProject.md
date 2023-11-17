@@ -7,3 +7,8 @@ description: Our Binary Project
 type: hacks
 courses: { "compsci": { "week": 2 } }
 ---
+
+
+# Quiz
+
+<button class="button" type="button">Click Me!</button>
