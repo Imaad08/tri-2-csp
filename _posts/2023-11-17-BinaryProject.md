@@ -439,6 +439,124 @@ Liquid for loop includes last number, thus the Minus
 </body>
 </html>
 
+# COLOR
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RGB Color Selector</title>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+        #color-display {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function updateColor() {
+            var red = parseInt(document.getElementById('red').value, 2);
+            var green = parseInt(document.getElementById('green').value, 2);
+            var blue = parseInt(document.getElementById('blue').value, 2);
+
+            var colorDisplay = document.getElementById('color-display');
+            colorDisplay.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        }
+
+        function setBinaryValue(buttonId) {
+            var button = document.getElementById(buttonId);
+            if (button.innerHTML === "0") {
+                button.innerHTML = "1";
+            } else {
+                button.innerHTML = "0";
+            }
+            updateBinaryValue();
+            updateColor();
+        }
+
+        function updateBinaryValue() {
+            var redBinary = "";
+            var greenBinary = "";
+            var blueBinary = "";
+
+            for (var i = 0; i < 8; i++) {
+                redBinary += document.getElementById('r' + i).innerHTML;
+                greenBinary += document.getElementById('g' + i).innerHTML;
+                blueBinary += document.getElementById('b' + i).innerHTML;
+            }
+
+            document.getElementById('red').value = redBinary;
+            document.getElementById('green').value = greenBinary;
+            document.getElementById('blue').value = blueBinary;
+        }
+    </script>
+</head>
+<body>
+    <h1>RGB Color Selector</h1>
+    <div class="button-container">
+        <h3>Red</h3>
+        <div id="red-buttons">
+            <!-- Red Binary Buttons -->
+            <!-- Assigning IDs r0, r1, ..., r7 to these buttons -->
+            <button id="r0" onclick="setBinaryValue('r0')">0</button>
+            <button id="r1" onclick="setBinaryValue('r1')">0</button>
+            <button id="r2" onclick="setBinaryValue('r2')">0</button>
+            <button id="r3" onclick="setBinaryValue('r3')">0</button>
+            <button id="r4" onclick="setBinaryValue('r4')">0</button>
+            <button id="r5" onclick="setBinaryValue('r5')">0</button>
+            <button id="r6" onclick="setBinaryValue('r6')">0</button>
+            <button id="r7" onclick="setBinaryValue('r7')">0</button>
+        </div>
+    </div>
+    <div class="button-container">
+        <h3>Green</h3>
+        <div id="green-buttons">
+            <!-- Green Binary Buttons -->
+            <!-- Assigning IDs g0, g1, ..., g7 to these buttons -->
+            <button id="g0" onclick="setBinaryValue('g0')">0</button>
+            <button id="g1" onclick="setBinaryValue('g1')">0</button>
+            <button id="g2" onclick="setBinaryValue('g2')">0</button>
+            <button id="g3" onclick="setBinaryValue('g3')">0</button>
+            <button id="g4" onclick="setBinaryValue('g4')">0</button>
+            <button id="g5" onclick="setBinaryValue('g5')">0</button>
+            <button id="g6" onclick="setBinaryValue('g6')">0</button>
+            <button id="g7" onclick="setBinaryValue('g7')">0</button>
+        </div>
+    </div>
+    <div class="button-container">
+        <h3>Blue</h3>
+        <div id="blue-buttons">
+            <!-- Blue Binary Buttons -->
+            <!-- Assigning IDs b0, b1, ..., b7 to these buttons -->
+            <button id="b0" onclick="setBinaryValue('b0')">0</button>
+            <button id="b1" onclick="setBinaryValue('b1')">0</button>
+            <button id="b2" onclick="setBinaryValue('b2')">0</button>
+            <button id="b3" onclick="setBinaryValue('b3')">0</button>
+            <button id="b4" onclick="setBinaryValue('b4')">0</button>
+            <button id="b5" onclick="setBinaryValue('b5')">0</button>
+            <button id="b6" onclick="setBinaryValue('b6')">0</button>
+            <button id="b7" onclick="setBinaryValue('b7')">0</button>
+        </div>
+    </div>
+    <!-- Displaying the color based on the selected RGB values -->
+    <div id="color-display"></div>
+    <!-- Hidden input fields to store binary values -->
+    <input type="hidden" id="red" value="00000000">
+    <input type="hidden" id="green" value="00000000">
+    <input type="hidden" id="blue" value="00000000">
+</body>
+</html>
+
+
 
 
 # LIGHTBULBS
