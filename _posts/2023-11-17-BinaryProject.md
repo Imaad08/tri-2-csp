@@ -348,6 +348,10 @@ Liquid for loop includes last number, thus the Minus
 
 </body>
 
+
+# Logic Gates
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -415,4 +419,43 @@ Liquid for loop includes last number, thus the Minus
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logic Gate Calculator</title>
+    <script>
+        function calculateGate() {
+            var input1 = document.querySelector('input[name="set1"]:checked').value;
+            var input2 = document.querySelector('input[name="set2"]:checked').value;
+            
+            var result = document.getElementById('result');
 
+            if (input1 === '1' && input2 === '1') {
+                result.innerHTML = "AND Gate Output: 1";
+            } else if (input1 === '1' || input2 === '1') {
+                result.innerHTML = "OR Gate Output: 1";
+            } else if (input1 !== input2) {
+                result.innerHTML = "XOR Gate Output: 1";
+            } else {
+                result.innerHTML = "Output: 0";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Logic Gate Calculator</h1>
+    <div>
+        <h2>Set 1</h2>
+        <input type="radio" name="set1" value="1"> 1
+        <input type="radio" name="set1" value="0"> 0
+    </div>
+    <div>
+        <h2>Set 2</h2>
+        <input type="radio" name="set2" value="1"> 1
+        <input type="radio" name="set2" value="0"> 0
+    </div>
+    <br>
+    <button onclick="calculateGate()">Calculate</button>
+    <div id="result"></div>
+</body>
+</html>
