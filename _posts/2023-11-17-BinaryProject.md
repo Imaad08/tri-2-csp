@@ -347,3 +347,72 @@ Liquid for loop includes last number, thus the Minus
 </div>
 
 </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Simulator</title>
+    <style>
+        #lightbulb {
+            width: 100px;
+            height: 150px;
+            background-image: url('lightbulb.png'); /* Replace with your lightbulb image file */
+            background-size: cover;
+            margin: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="lightbulb"></div>
+
+<button onclick="incrementState()">+1</button>
+<button onclick="decrementState()">-1</button>
+<button onclick="turnOn()">Turn On</button>
+<button onclick="turnOff()">Turn Off</button>
+
+<script>
+    let lightbulbState = 0;  // 0 for Off, 1 for On
+    const lightbulb = document.getElementById('lightbulb');
+
+    function updateLightbulb() {
+        if (lightbulbState === 1) {
+            lightbulb.style.backgroundImage = "url('lightbulb.png')";  // Replace with your lightbulb image file
+        } else {
+            lightbulb.style.backgroundImage = "none";
+        }
+    }
+
+    function incrementState() {
+        lightbulbState += 1;
+        updateLightbulb();
+    }
+
+    function decrementState() {
+        if (lightbulbState > 0) {
+            lightbulbState -= 1;
+            updateLightbulb();
+        }
+    }
+
+    function turnOn() {
+        lightbulbState = 1;
+        updateLightbulb();
+    }
+
+    function turnOff() {
+        lightbulbState = 0;
+        updateLightbulb();
+    }
+</script>
+
+</body>
+</html>
+
