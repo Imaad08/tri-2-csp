@@ -95,3 +95,76 @@ courses: { "compsci": { "week": 2 } }
     <div id="result"></div>
     <input type="hidden" id="gate">
 </body>
+
+
+The function calculateGate() calculates the output of a logic gate based on two input values and a selected gate type by comparing the input to the criteria of the selected gate.
+
+---
+
+Process
+1. Get the values of input1, input2, and gate from the corresponding HTML elements.
+2. Get the reference to the result HTML element.
+3. Use a series of conditional statements to determine the gate type and calculate the output based on the input values.
+4. Update the innerHTML of the result element with the calculated output.
+
+---
+
+Outputs
+- The output is displayed in the result HTML element and depends on the selected gate type and input values.
+
+
+```python
+function calculateGate() {
+            var input1 = document.getElementById('input1').value;
+            var input2 = document.getElementById('input2').value;
+            var gate = document.getElementById('gate').value;
+
+            var result = document.getElementById('result');
+
+            if (gate === 'and') {
+                if (input1 === '1' && input2 === '1') {
+                    result.innerHTML = "AND Gate Output: 1";
+                } else {
+                    result.innerHTML = "AND Gate Output: 0";
+                }
+            } else if (gate === 'or') {
+                if (input1 === '1' || input2 === '1') {
+                    result.innerHTML = "OR Gate Output: 1";
+                } else {
+                    result.innerHTML = "OR Gate Output: 0";
+                }
+            } else if (gate === 'xor') {
+                if (input1 !== input2) {
+                    result.innerHTML = "XOR Gate Output: 1";
+                } else {
+                    result.innerHTML = "XOR Gate Output: 0";
+                }
+            } else if (gate === 'nand') {
+                if (!(input1 === '1' && input2 === '1')) {
+                    result.innerHTML = "NAND Gate Output: 1";
+                } else {
+                    result.innerHTML = "NAND Gate Output: 0";
+                }
+            } else if (gate === 'nor') {
+                if (!(input1 === '1' || input2 === '1')) {
+                    result.innerHTML = "NOR Gate Output: 1";
+                } else {
+                    result.innerHTML = "NOR Gate Output: 0";
+                }
+            } else if (gate === 'xnor') {
+                if (input1 === input2) {
+                    result.innerHTML = "XNOR Gate Output: 1";
+                } else {
+                    result.innerHTML = "XNOR Gate Output: 0";
+                }
+            }
+        }
+
+        function setChoice(value, setId) {
+            document.getElementById(setId).value = value;
+        }
+
+        function setGate(gateType) {
+            document.getElementById('gate').value = gateType;
+        }
+```
