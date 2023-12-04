@@ -7,16 +7,14 @@ description: Our Binary Project
 type: hacks
 courses: { "compsci": { "week": 2 } }
 ---
-
 # BINARY LIGHTUP THING
-
+{% assign BITS = 8 %}
 <style>
     td {
         text-align: center;
         vertical-align: middle;
     }
 </style>
-
 <table>
     <thead>
         <tr class="header" id="table">
@@ -30,21 +28,19 @@ courses: { "compsci": { "week": 2 } }
     </thead>
     <tbody>
         <tr>
-            <td><div class="button" id="add1" onclick="add(1)">+1</div></td>
+            <td><button class="button" id="add1" onclick="add(1)">+1</button></td>
             <td id="binary">00000000</td>
             <td id="octal">0</td>
             <td id="hexadecimal">0</td>
             <td id="decimal">0</td>
-            <td><div class="button" id="sub1" onclick="add(-1)">-1</div></td>
+            <td><button class="button" id="sub1" onclick="add(-1)">-1</button></td>
         </tr>
     </tbody>
 </table>
-
 {% comment %}
 Liquid for loop includes last number, thus the Minus
 {% endcomment %}
 {% assign bits = BITS | minus: 1 %}
-
 <table>
     <thead>
         <tr>
@@ -52,8 +48,8 @@ Liquid for loop includes last number, thus the Minus
             Build many bits
             {% endcomment %}
             {% for i in (0..bits) %}
-            <th><img src="https://iili.io/JxdDzUG.png" alt="JxdDzUG.png">
-                <div class="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</div>
+            <th><img id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
+                <button class="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
             </th>
             {% endfor %}
         </tr>
@@ -69,15 +65,13 @@ Liquid for loop includes last number, thus the Minus
         </tr>
     </tbody>
 </table>
-
 <script>
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
-    const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.png";
+    const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
     const MSG_OFF = "Turn off";
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
-
     // return string with current value of each bit
     function getBits() {
         let bits = "";
