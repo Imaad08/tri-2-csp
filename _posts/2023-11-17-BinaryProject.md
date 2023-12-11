@@ -191,3 +191,66 @@ courses: { "compsci": { "week": 2 } }
 </div>
 
 </body>
+This code takes a password given by the user, hides it and gives an option to view it. When the encrypt button is clicked, the code converts every character to its ASCII counterpart and then converts that into a string of binary. The decrypter does the same thing but in reverse order, so turning the binary into ASCII and turning the ASCII back to a readable password
+
+# Encrypter
+
+```python
+function togglePassword() {
+            var passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+
+        function encryptPassword() {
+            var passwordInput = document.getElementById("password");
+            var encryptedPassword = document.getElementById("encryptedPassword");
+
+            if (passwordInput.value === "") {
+                alert("Please enter a password.");
+                return;
+            }
+
+            // conveert da password to binary
+            var binaryPassword = passwordInput.value.split('').map(function (char) {
+                return char.charCodeAt(0).toString(2).padStart(8, '0');
+            }).join(' ');
+
+            encryptedPassword.textContent = "Encrypted Password: " + binaryPassword;
+        }
+```
+
+# Decrypter
+
+```python
+function toggleBinaryPassword() {
+            var binaryPasswordInput = document.getElementById("binaryPassword");
+
+            if (binaryPasswordInput.type === "text") {
+                binaryPasswordInput.type = "password";
+            } else {
+                binaryPasswordInput.type = "text";
+            }
+        }
+
+        function decryptPassword() {
+            var binaryPasswordInput = document.getElementById("binaryPassword");
+            var decryptedPassword = document.getElementById("decryptedPassword");
+
+            if (binaryPasswordInput.value === "") {
+                alert("Please enter a binary-encoded password.");
+                return;
+            }
+
+            // convert binary to characters
+            var decodedPassword = binaryPasswordInput.value.split(' ').map(function (binary) {
+                return String.fromCharCode(parseInt(binary, 2));
+            }).join('');
+
+            decryptedPassword.textContent = "Decrypted Password: " + decodedPassword;
+        }
+```
