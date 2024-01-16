@@ -3,7 +3,7 @@ description: "August 2023 to June 2024"
 owner_name: Imaad Muzaffer
 github_username: Imaad08
 github_repo: "tri-2-csp"
-baseurl: "/csp-project"
+baseurl: "/tri-2-csp"
 remote_theme: jekyll/minima
 minima:
   social_links:
