@@ -221,6 +221,23 @@ function togglePassword() {
             }).join(' ');
 
             encryptedPassword.textContent = "Encrypted Password: " + binaryPassword;
+            
+        }
+        function decryptPassword() {
+            var binaryPasswordInput = document.getElementById("binaryPassword");
+            var decryptedPassword = document.getElementById("decryptedPassword");
+
+            if (binaryPasswordInput.value === "") {
+                alert("Please enter a binary-encoded password.");
+                return;
+            }
+
+            // convert binary to characters
+            var decodedPassword = binaryPasswordInput.value.split(' ').map(function (binary) {
+                return String.fromCharCode(parseInt(binary, 2));
+            }).join('');
+
+            decryptedPassword.textContent = "Decrypted Password: " + decodedPassword;
         }
 ```
 
